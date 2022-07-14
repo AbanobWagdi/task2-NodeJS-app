@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/all.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body dir="rtl">
+
+
+  {{>header}}
+
+  {{#each data}}
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{urlToImage}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text"><small class="text-muted">{{publishedAt}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+
+
+
+
+  <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
